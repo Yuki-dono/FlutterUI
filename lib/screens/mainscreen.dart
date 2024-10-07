@@ -5,13 +5,17 @@ class Mainscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.red,
+    return const Scaffold(
+      backgroundColor: Color.fromRGBO(244, 67, 54, 1),
       body: Center(
-        child: Image.asset(
-          'assets/iconWBackground.jpg', // Replace with your image path
-          width: 200, // You can specify width and height if needed
-          height: 200, // Optional: Set height, or remove for natural size
+        child: SizedBox(
+          height: 500,
+          width: 500,
+          child: Card(
+            child: Center(
+              child: Text('Your content here'),
+            ),
+          ),
         ),
       ),
     );
