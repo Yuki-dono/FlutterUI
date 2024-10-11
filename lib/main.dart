@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:heartlink/screens/mainscreen.dart';
+import 'package:heartlink/screens/mainscreen.dart'; // Correct import for MainScreen
 import 'package:heartlink/screens/signup.dart';
 import 'package:heartlink/screens/login.dart';
 
@@ -13,11 +13,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomeScreen(), // Set the home screen
+      home: const HomeScreen(), // Set the initial home screen
       routes: {
         '/login': (context) => const Login(),
         '/signup': (context) => const Signup(),
-        '/mainscreen': (context) => const Mainscreen(),
+        '/mainscreen': (context) => MainScreen(), // Link to MainScreen here
       },
     );
   }
@@ -116,8 +116,7 @@ class HomeScreen extends StatelessWidget {
                       width: 340,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(
-                              context, '/login'); // Navigate to login
+                          Navigator.pushNamed(context, '/login');
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
